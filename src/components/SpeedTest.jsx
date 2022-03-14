@@ -14,17 +14,13 @@ function SpeedTest() {
   return (
     <SpeedTestWrapper>
 
-      { isShowInfo &&
-        <Info>
-          Входящее соединение: { speed } МБайт/с
-        </Info>
-      }
+      <Info style={{ display: isShowInfo ? 'block' : 'none' }}>
+        Входящее соединение: { speed } МБайт/с
+      </Info>
+      
+      <img style={{ display: isLoad ? 'block' : 'none' }} src={Loader} alt="Загрузка" />
 
-      { isLoad && 
-        <img src={Loader} alt="Загрузка" />
-      }
-
-      { !isLoad && <Button onClick={() => dispatch(startAsync())}>Начать</Button> }
+      <Button style={{ display: !isLoad ? 'block' : 'none' }} onClick={() => dispatch(startAsync())}>Начать</Button>
       
     </SpeedTestWrapper>
   )

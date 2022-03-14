@@ -57,7 +57,7 @@ export const startAsync = () => (dispatch) => {
       dispatch(stop())
   }
 
-  axios.get('/bigfile.jpg', { 
+  axios.get('https://cache-khabrt05.cdn.yandex.net/internetometr.download.cdn.yandex.net/bigfile.png?1647253096558', { 
     timeout: 5000,
     onDownloadProgress: (progressEvent) => {
       dispatch(setDownloadSize(progressEvent.loaded))
