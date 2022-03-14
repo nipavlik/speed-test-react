@@ -20,7 +20,7 @@ function SpeedTest() {
       
       <img style={{ display: isLoad ? 'block' : 'none' }} src={Loader} alt="Загрузка" />
 
-      <Button style={{ display: !isLoad ? 'block' : 'none' }} onClick={() => dispatch(startAsync())}>Начать</Button>
+      <Button style={{ display: !isLoad ? 'block' : 'none' }} onClick={() => dispatch(startAsync())}>Измерить</Button>
       
     </SpeedTestWrapper>
   )
